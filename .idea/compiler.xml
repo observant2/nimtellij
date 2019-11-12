@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="intelliclay.main" target="1.8" />
-      <module name="intelliclay.test" target="1.8" />
+      <module name="nimtellij.main" target="1.8" />
+      <module name="nimtellij.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
