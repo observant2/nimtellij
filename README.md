@@ -2,6 +2,8 @@
 
 Nim Language Support for IntelliJ.
 
+The [nim language server](https://github.com/PMunch/nimlsp) must be in your PATH.
+
 ## Development
 
 * Install the plugin `Grammar-Kit`.

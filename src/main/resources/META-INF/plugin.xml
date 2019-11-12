@@ -6,7 +6,7 @@
     <description>Nim Language Support</description>
 
     <extensions defaultExtensionNs="com.intellij">
-        <preloadingActivity implementation="com.nimtellij.ide.NimPreloadingActivity" id="com.nimtellij.ide.NimPreloadingActivity"/>
+        <preloadingActivity implementation="com.nimtellij.NimPreloadingActivity" id="com.nimtellij.NimPreloadingActivity"/>
         <completion.contributor implementationClass="org.wso2.lsp4intellij.contributors.LSPCompletionContributor" id="LSPCompletionContributor" language="Nim" />
         <fileType name="Nim file" implementationClass="com.nimtellij.ide.NimFileType" fieldName="INSTANCE" language="Nim" extensions="nim"/>
 

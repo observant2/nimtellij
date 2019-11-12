@@ -1,4 +1,4 @@
-package com.nimtellij.ide
+package com.nimtellij
 
 import com.intellij.openapi.application.PreloadingActivity
 import com.intellij.openapi.progress.ProgressIndicator
@@ -11,7 +11,7 @@ class NimPreloadingActivity : PreloadingActivity() {
             .addServerDefinition(
                 RawCommandServerDefinition(
                     "nim",
-                    arrayOf("C:/Users/Admin/Documents/eigene_programme/nimlsp.exe")
+                    arrayOf("nimlsp")
                 )
             )
     }
