@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>itmuckel.nimtellij</id>
+    <name>nimtellij</name>
+    <vendor email="itmuckel@gmail.com">itmuckel</vendor>
+
+    <description>Nim Language Support</description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <preloadingActivity implementation="com.nimtellij.ide.NimPreloadingActivity" id="com.nimtellij.ide.NimPreloadingActivity"/>
+        <completion.contributor implementationClass="org.wso2.lsp4intellij.contributors.LSPCompletionContributor" id="LSPCompletionContributor" language="Nim" />
+        <fileType name="Nim file" implementationClass="com.nimtellij.ide.NimFileType" fieldName="INSTANCE" language="Nim" extensions="nim"/>
+
+        <lang.syntaxHighlighterFactory language="Nim"
+                                       implementationClass="com.nimtellij.ide.NimSyntaxHighlighterFactory"/>
+        <lang.braceMatcher language="Nim" implementationClass="com.nimtellij.ide.NimPairedBraceMatcher"/>
+        <lang.parserDefinition language="Nim" implementationClass="com.nimtellij.NimParserDefinition"/>
+
+        <colorSettingsPage implementation="com.nimtellij.ide.NimColorSettingsPage"/>
+
+
+        <externalAnnotator id="LSPAnnotator" language="TEXT" implementationClass="org.wso2.lsp4intellij.contributors.annotator.LSPAnnotator"/>
+
+        <renameHandler implementation="org.wso2.lsp4intellij.contributors.rename.LSPRenameHandler"
+                       id="LSPRenameHandler" order="first"/>
+        <renamePsiElementProcessor implementation="org.wso2.lsp4intellij.contributors.rename.LSPRenameProcessor" id="LSPRenameProcessor" order="first"/>
+
+
+
+    </extensions>
+
+
+    <application-components>
+        <component>
+            <implementation-class>org.wso2.lsp4intellij.IntellijLanguageClient</implementation-class>
+        </component>
+    </application-components>
+</idea-plugin>
