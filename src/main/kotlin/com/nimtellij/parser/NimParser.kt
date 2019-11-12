@@ -19,7 +19,6 @@ import com.nimtellij.lexer.NimTokenTypes.Companion.IF
 import com.nimtellij.lexer.NimTokenTypes.Companion.KEYWORDS
 import com.nimtellij.lexer.NimTokenTypes.Companion.LEFT_PAREN
 import com.nimtellij.lexer.NimTokenTypes.Companion.LET
-import com.nimtellij.lexer.NimTokenTypes.Companion.LET_STAR
 import com.nimtellij.lexer.NimTokenTypes.Companion.LITERAL
 import com.nimtellij.lexer.NimTokenTypes.Companion.PROC
 import com.nimtellij.lexer.NimTokenTypes.Companion.QUOTE
@@ -80,7 +79,7 @@ class NimParser : PsiParser, NimTokenTypes {
             parseDocstring()
         } else if (isAt(IF)) {
             advance()
-        } else if (isAt(LET) || isAt(LET_STAR)) {
+        } else if (isAt(LET)) {
             advance()
             parseLet()
         }
@@ -157,8 +156,6 @@ class NimParser : PsiParser, NimTokenTypes {
             return IF
         } else if (isAt(LET)) {
             return LET
-        } else if (isAt(LET_STAR)) {
-            return LET_STAR
         }
 
         return EXPRESSION

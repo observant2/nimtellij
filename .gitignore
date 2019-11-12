@@ -138,3 +138,5 @@ gradle-app.setting
 
 
 /src/main/gen/
+/tools/generate_keywords.exe
+/tools/output.txt
