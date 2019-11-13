@@ -8,6 +8,9 @@ import com.intellij.openapi.options.colors.ColorSettingsPage
 import com.nimtellij.lexer.NimTokenTypes
 import javax.swing.Icon
 
+/*
+ *
+ */
 class NimColorSettingsPage : ColorSettingsPage {
     companion object {
         val DESCRIPTORS = arrayOf(

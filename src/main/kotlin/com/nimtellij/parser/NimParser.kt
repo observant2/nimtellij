@@ -9,6 +9,10 @@ import com.nimtellij.lexer.NimTokenTypes
 import java.io.EOFException
 import java.util.*
 
+/*
+ * The parser doesn't really do anything, but lsp4intellij
+ * somehow requires it to provide code completion.
+ */
 class NimParser : PsiParser, NimTokenTypes {
     val markers = Stack<PsiBuilder.Marker>()
     lateinit var builder: PsiBuilder
