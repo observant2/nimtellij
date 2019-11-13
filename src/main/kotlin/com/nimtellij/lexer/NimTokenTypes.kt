@@ -6,6 +6,16 @@ import com.intellij.psi.tree.TokenSet
 import com.nimtellij.ide.NimLanguage
 
 
+/**
+ * This interface contains all tokens that the lexer will generate.
+ *
+ * The lexer breaks down raw text into tokens that the parser can understand.
+ * Because this plugin currently uses nimlsp to get completion hints etc,
+ * these tokens are only used to provide basic syntax highlighting.
+ *
+ * TODO: Also there are a lot of tokens which are only here, because they belonged
+ * to my unfinished Common Lisp plugin.
+ */
 interface NimTokenTypes {
 
     companion object {

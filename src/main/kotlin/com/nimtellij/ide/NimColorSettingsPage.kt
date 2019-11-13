@@ -8,8 +8,10 @@ import com.intellij.openapi.options.colors.ColorSettingsPage
 import com.nimtellij.lexer.NimTokenTypes
 import javax.swing.Icon
 
-/*
- *
+/**
+ * Highlighted syntax isn't automatically available to the
+ * 'Editor -> Color Scheme -> Nim' page. It has to be added
+ * to the DESCRIPTORS array of this class.
  */
 class NimColorSettingsPage : ColorSettingsPage {
     companion object {
@@ -26,11 +28,7 @@ class NimColorSettingsPage : ColorSettingsPage {
     override fun getHighlighter(): SyntaxHighlighter = NimSyntaxHighlighter()
 
     override fun getDemoText(): String {
-        return """(defvar bla 3 "")
-
-(defun bla (param1)
-    ""
-    )"""
+        return """Some nim code..."""
     }
 
     override fun getAdditionalHighlightingTagToDescriptorMap(): MutableMap<String, TextAttributesKey>? = null

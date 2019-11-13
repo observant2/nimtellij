@@ -35,6 +35,12 @@ class NimSyntaxHighlighter : SyntaxHighlighterBase() {
         })
 }
 
+/**
+ * To get syntax highlighting for certain tokens,
+ * add a TokenSet containing the tokens as a key
+ * and the TextAttributesKey as a value to the
+ * result of this function.
+ */
 private fun makeTokenMap(): Map<TokenSet, TextAttributesKey> {
     val result = THashMap<TokenSet, TextAttributesKey>()
     result[NimTokenTypes.KEYWORDS] = createTextAttributesKey(

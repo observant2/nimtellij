@@ -14,6 +14,13 @@ import com.intellij.lexer.FlexLexer;
 %type IElementType
 
 
+// This file contains regexes that will break down the raw text file
+// into tokens for the parser.
+//
+// JFlex will generate a lexer out of these declarations.
+// To understand the syntax, have a look at https://jflex.de/manual.html
+// starting at "A simple Example: How to work with JFlex".
+
 
 LineTerminator=\r|\n|\r\n
 InputCharacter=[^\r\n]
