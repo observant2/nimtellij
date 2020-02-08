@@ -2,7 +2,7 @@
 
 Nim Language Support for IntelliJ.
 
-The [nim language server](https://github.com/PMunch/nimlsp) must be in your PATH.
+The [nim language server](https://github.com/PMunch/nimlsp) must be in your PATH. Just run `nimble install nimlsp`.
 
 ## Development
 
